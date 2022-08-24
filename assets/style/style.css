@@ -414,7 +414,7 @@ nav{
 
  .skills__subtitle{
     font-size: var(--small-font-size);
-    color: var(--text-color-light);
+    color: var(--text-color-light); 
  }
 
  .skills__arrow{
@@ -577,7 +577,7 @@ nav{
  /* ------------------------------ SERVICES -------------------------- */
  .services__container{
     gap: 1.5rem;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
  }
 
  .services__content{
@@ -585,7 +585,7 @@ nav{
     background-color: var(--container-color);
     padding: 3.5rem .5rem 1.25rem 1.5rem;
     border-radius: .25rem;
-    box-shadow: 1 2px 4px rgba(0,0,0,.15);
+    box-shadow: 0 2px 4px rgba(0,0,0,.15);
     transition: .3s;
  }
 
@@ -615,7 +615,7 @@ nav{
     transform: translateX(.25rem);
  }
 
- .service__modal{
+ .services__modal{
     position: fixed;
     top: 0;
     left: 0;
@@ -627,8 +627,8 @@ nav{
     justify-content: center;
     padding: 0 1rem;
     z-index: var(--z-modal);
-    /* opacity: 0; */
-    /* visibility: hidden; */
+    opacity: 0;
+    visibility: hidden;
     transition: .3s;
  }
 
@@ -651,4 +651,24 @@ nav{
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-1-5);
+ }
+
+ .services__modal-close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--first-color);
+    cursor: pointer;
+ }
+
+ .services__modal-icon{
+    color: var(--first-color);
+    margin-right: var(--mb-0-25);
+ } 
+
+ /* Active Modal */
+ .active-modal{
+    opacity: 1;
+    visibility: visible;
  }
